@@ -1,6 +1,6 @@
 package br.com.ehm.apiuser.resoucers;
 
-import br.com.ehm.apiuser.domain.User;
+import br.com.ehm.apiuser.domain.Users;
 import br.com.ehm.apiuser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class UserResoucers {
     private UserService service;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<User> findById(@PathVariable Integer id){
+    public ResponseEntity<Users> findById(@PathVariable Integer id){
 
         return ResponseEntity.ok().body(service.findById(id));
     }
